@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  // TODO react router routes: home,projects, about me, tech skills
   return (
     <div className="App">
       <header className="App-header">
