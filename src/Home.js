@@ -7,7 +7,7 @@ import {useHistory} from "react-router-dom";
 export const Home = (props) => {
     useEffect(() => {
         props.setTab("/")
-    }, [])
+    }, [props])
     let history = useHistory();
     return (
         <div>

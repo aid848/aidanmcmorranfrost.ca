@@ -35,7 +35,7 @@ export const Projects = (props) => {
     const classes = useStyles();
     useEffect(() => {
         props.setTab("/projects")
-    }, [])
+    }, [props])
 
     const gotoSource = (value) => {
         const win = window.open(value, "_blank", "noopener,noreferrer");

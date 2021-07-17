@@ -6,7 +6,7 @@ import {bioTXT} from "./Content";
 export const About = (props) => {
     useEffect(() => {
         props.setTab("/about")
-    }, [])
+    }, [props])
 
     return (
         <Grid container>
