@@ -1,65 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-} from "react-router-dom";
-import {Tab, Tabs, AppBar} from "@material-ui/core";
+import {Route, Switch, useHistory,} from "react-router-dom";
+import {AppBar, Tab, Tabs} from "@material-ui/core";
 import {useState} from "react";
+import {Home} from "./Home";
+import {Projects} from "./MyProjects";
+import {About} from "./AboutMe";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const [tab, setTab] = useState(0)
-  // TODO react router routes: home,projects, about me, tech skills
-  const handleNavbar = (e,value) => {
+    const [tab, setTab] = useState("/")
+    let history = useHistory();
 
-  }
-  return (
-    <div className="App">
-      <Router>
-        <div>
-          <AppBar position="static">
-          <Tabs value={tab} onChange={handleNavbar}>
-            <Tab label={"Home"}></Tab>
-            <Tab label={"About Me"}></Tab>
-            <Tab label={"Projects"}></Tab>
-          </Tabs>
-        </AppBar>
+    const handleNavbar = (e, value, h) => {
+        h.push(value)
+    }
 
-
-          {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-          <Switch>
-            <Route path="/about">
-              <About setTab={setTab}/>
-            </Route>
-            <Route path="/users">
-              <Projects setTab={setTab}/>
-            </Route>
-            <Route path="/">
-              <Home setTab={setTab}/>
-            </Route>
-          </Switch>
+    // TODO add plane and PA demos to router
+    return (
+        <div className="App">
+            <div>
+                <AppBar className={"AppBar"} color={'transparent'} position="static">
+                    <Tabs value={tab} centered={true} onChange={(e, value) => handleNavbar(e, value, history)}>
+                        <Tab label={"Home"} value={"/"}></Tab>
+                        <Tab label={"About Me"} value={"/about"}></Tab>
+                        <Tab label={"Projects"} value={"/projects"}></Tab>
+                    </Tabs>
+                </AppBar>
+                <Switch>
+                    <Route path="/about">
+                        <About setTab={setTab}/>
+                    </Route>
+                    <Route path="/projects">
+                        <Projects setTab={setTab}/>
+                    </Route>
+                    <Route path="/">
+                        <Home setTab={setTab}/>
+                    </Route>
+                </Switch>
+            </div>
+            <footer className="FooterCopyright">Copyright © 2021, Aidan Frost</footer>
         </div>
-      </Router>
-    </div>
-  );
+    );
 }
 
-function Home(props) {
-  props.setTab(0)
-  return <h2>Home</h2>;
-}
-
-function About(props) {
-  props.setTab(1)
-  return <h2>About</h2>;
-}
-
-function Projects(props) {
-  props.setTab(2)
-  return <h2>Projects</h2>;
-}
 
 export default App;
