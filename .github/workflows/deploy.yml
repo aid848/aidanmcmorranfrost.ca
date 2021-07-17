@@ -2,6 +2,7 @@ name: deploy
 
 on:
   pull_request:
+    - live
   push:
     branches:
       - live
