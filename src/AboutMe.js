@@ -1,4 +1,6 @@
 import React, {useEffect} from "react";
+import {Grid, Paper, Typography} from "@material-ui/core";
+import {bioTXT} from "./Content";
 
 
 export const About = (props) => {
@@ -6,5 +8,16 @@ export const About = (props) => {
         props.setTab("/about")
     }, [])
 
-    return <h2>About</h2>;
+    return (
+        <Grid container>
+            <Grid item xs>
+                <Paper className="AboutMeCard" elevation={3}
+                       style={{display: "inline-block", backgroundColor: "rgba(255,255,255,0.5)"}}>
+                    <Typography variant={"body1"}>
+                        {bioTXT}
+                    </Typography>
+                </Paper>
+            </Grid>
+        </Grid>
+    );
 }

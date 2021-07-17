@@ -60,7 +60,7 @@ export const myPlatforms = [
 
 // ABOUT ME
 export const bioTXT =
-    "Hello, I am a fourth year computer science student at UBC and have two golden retrievers! I made this site to show some of my projects to the world. Many of these projects are have source code and/or demos available so please take a look!";
+    "Hello, I am a fourth year computer science student at UBC and have two golden retrievers! I made this site to show some of my projects to the world. Many of these projects are have source code and/or demos available so please take a look! I will be adding my CV here soon!";
 
 
 // PROJECT DESCRIPTIONS

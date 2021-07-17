@@ -44,7 +44,7 @@ export const Projects = (props) => {
 
     return (
         <Grid container spacing={3}
-              style={{textAlign: 'center', margin: 5}}>
+              style={{textAlign: 'center', paddingBottom: "1rem", paddingTop: "1rem"}}>
             {MYPROJECTS.map((ele) => {
                 return (
                     <Grid item xs style={{display: "flex"}}>
@@ -52,10 +52,8 @@ export const Projects = (props) => {
                             <CardMedia className={classes.media}>
                                 {ele.photosSrc && (
                                     <Carousel dynamicHeight={false} indicators={false} controls={() => {
-                                        if (ele.photosSrc.length > 1) {
-                                            return true
-                                        }
-                                        return false
+                                        return ele.photosSrc.length > 1;
+
                                     }} interval={5000} nextLabel="" prevLabel="">
                                         {ele.photosSrc.map((photo, i) => {
                                             return (
@@ -81,21 +79,21 @@ export const Projects = (props) => {
                             </CardContent>
                             <CardActions>
                                 <ButtonGroup fullWidth>
-                                {ele.demoLink && <Button variant="contained" onClick={() => {
-                                    gotoSource(ele.demoLink)
-                                }} size="small" color="primary">
-                                    Demo
-                                </Button>}
-                                {ele.sourceLink && <Button variant="contained" onClick={() => {
-                                    gotoSource(ele.sourceLink)
-                                }} size="small" color="primary">
-                                    Source Code
-                                </Button>}
-                                {ele.releaseLink && <Button variant="contained" onClick={() => {
-                                    gotoSource(ele.releaseLink)
-                                }} size="small" color="primary">
-                                    Release Link
-                                </Button>}
+                                    {ele.demoLink && <Button variant="contained" onClick={() => {
+                                        gotoSource(ele.demoLink)
+                                    }} size="small" color="primary">
+                                        Demo
+                                    </Button>}
+                                    {ele.sourceLink && <Button variant="contained" onClick={() => {
+                                        gotoSource(ele.sourceLink)
+                                    }} size="small" color="primary">
+                                        Source Code
+                                    </Button>}
+                                    {ele.releaseLink && <Button variant="contained" onClick={() => {
+                                        gotoSource(ele.releaseLink)
+                                    }} size="small" color="primary">
+                                        Release Link
+                                    </Button>}
                                 </ButtonGroup>
                             </CardActions>
                         </Card>
