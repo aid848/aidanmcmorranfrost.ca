@@ -36,6 +36,7 @@ function App() {
                     <Route path="/">
                         <Home setTab={setTab}/>
                     </Route>
+
                 </Switch>
             </div>
             <footer className="FooterCopyright">Copyright © 2021, Aidan Frost</footer>

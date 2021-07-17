@@ -82,7 +82,7 @@ export const Projects = (props) => {
                                     {ele.demoLink && <Button variant="contained" onClick={() => {
                                         gotoSource(ele.demoLink)
                                     }} size="small" color="primary">
-                                        Demo
+                                        Demo (read description first)
                                     </Button>}
                                     {ele.sourceLink && <Button variant="contained" onClick={() => {
                                         gotoSource(ele.sourceLink)
