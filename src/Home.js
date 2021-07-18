@@ -27,9 +27,10 @@ export const Home = (props) => {
             </div>
             <div className="Home_Contact">
                 <ButtonGroup>
-                    {myPlatforms.map((ele) => {
+                    {myPlatforms.map((ele, i) => {
                         return (
                             <Button
+                                key={i}
                                 variant="contained"
                                 onClick={() => {
                                     const win = window.open(ele.link, "_blank", "noopener,noreferrer");
