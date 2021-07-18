@@ -19,11 +19,11 @@ function App() {
             <div>
                 <AppBar className={"AppBar"} color={'transparent'} position="static">
                     <Tabs value={tab} centered={true} onChange={(e, value) => handleNavbar(e, value, history)}>
-                        <Tab label={"Home"} value={"/"} style={{backgroundColor: "rgba(255,255,255,0.3)"}}></Tab>
+                        <Tab label={"Home"} value={"/"} style={{backgroundColor: "rgba(255,255,255,0.3)"}} />
                         <Tab label={"About Me"} value={"/about"}
-                             style={{backgroundColor: "rgba(255,255,255,0.3)"}}></Tab>
+                             style={{backgroundColor: "rgba(255,255,255,0.3)"}} />
                         <Tab label={"Projects"} value={"/projects"}
-                             style={{backgroundColor: "rgba(255,255,255,0.3)"}}></Tab>
+                             style={{backgroundColor: "rgba(255,255,255,0.3)"}} />
                     </Tabs>
                 </AppBar>
                 <Switch>
@@ -45,7 +45,7 @@ function App() {
                 backgroundSize: "cover",
                 margin: "1rem"
             }}>
-                <footer>Copyright © 2021, Aidan Frost</footer>
+                <footer>Copyright © 2021, Aidan Frost | <a style={{color: "black" }} href="https://github.com/aid848/aidanmcmorranfrost.ca">Source Code</a> </footer>
             </Card>
         </div>
     );
