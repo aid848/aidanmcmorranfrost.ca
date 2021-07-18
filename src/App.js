@@ -1,6 +1,6 @@
 import './App.css';
 import {Route, Switch, useHistory,} from "react-router-dom";
-import {AppBar, Tab, Tabs} from "@material-ui/core";
+import {AppBar, Card, Tab, Tabs} from "@material-ui/core";
 import {useState} from "react";
 import {Home} from "./Home";
 import {Projects} from "./MyProjects";
@@ -14,16 +14,16 @@ function App() {
     const handleNavbar = (e, value, h) => {
         h.push(value)
     }
-
-    // TODO add plane and PA demos to router
     return (
         <div className="App">
             <div>
                 <AppBar className={"AppBar"} color={'transparent'} position="static">
                     <Tabs value={tab} centered={true} onChange={(e, value) => handleNavbar(e, value, history)}>
-                        <Tab label={"Home"} value={"/"}></Tab>
-                        <Tab label={"About Me"} value={"/about"}></Tab>
-                        <Tab label={"Projects"} value={"/projects"}></Tab>
+                        <Tab label={"Home"} value={"/"} style={{backgroundColor: "rgba(255,255,255,0.3)"}} />
+                        <Tab label={"About Me"} value={"/about"}
+                             style={{backgroundColor: "rgba(255,255,255,0.3)"}} />
+                        <Tab label={"Projects"} value={"/projects"}
+                             style={{backgroundColor: "rgba(255,255,255,0.3)"}} />
                     </Tabs>
                 </AppBar>
                 <Switch>
@@ -39,7 +39,14 @@ function App() {
 
                 </Switch>
             </div>
-            <footer className="FooterCopyright">Copyright © 2021, Aidan Frost</footer>
+            <Card elevation={3} style={{
+                display: "inline-block",
+                backgroundColor: "rgba(255,255,255,0.5)",
+                backgroundSize: "cover",
+                margin: "1rem"
+            }}>
+                <footer>Copyright © 2021, Aidan Frost | <a style={{color: "black" }} href="https://github.com/aid848/aidanmcmorranfrost.ca">Source Code</a> </footer>
+            </Card>
         </div>
     );
 }

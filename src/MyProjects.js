@@ -13,11 +13,7 @@ import {
 import {MYPROJECTS} from "./Content";
 import {Carousel, CarouselItem} from "react-bootstrap";
 
-
 const useStyles = makeStyles({
-    root: {
-        // maxWidth: 500,
-    },
     media: {
         minHeight: "20vh",
         maxHeight: "20vh",
@@ -26,10 +22,15 @@ const useStyles = makeStyles({
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        minWidth: "25vw"
+        '@media (min-width:780px)': { // eslint-disable-line no-useless-computed-key
+            minWidth: "30vw",
+            maxWidth: "60vw"
+        },
+        '@media (max-width:779px)': { // eslint-disable-line no-useless-computed-key
+            minWidth: '95vw'
+        }
     },
 });
-
 
 export const Projects = (props) => {
     const classes = useStyles();
@@ -45,19 +46,21 @@ export const Projects = (props) => {
     return (
         <Grid container spacing={3}
               style={{textAlign: 'center', paddingBottom: "1rem", paddingTop: "1rem"}}>
-            {MYPROJECTS.map((ele) => {
+            {MYPROJECTS.map((ele, i) => {
+                let ctrl = false
+                if (ele.photosSrc) {
+                    ctrl = ele.photosSrc.length > 1
+                }
                 return (
-                    <Grid item xs style={{display: "flex"}}>
+                    <Grid item key={i} xs style={{display: "flex"}}>
                         <Card className={classes.card}>
-                            <CardMedia className={classes.media}>
+                            <CardMedia className={classes.media} component="div">
                                 {ele.photosSrc && (
-                                    <Carousel dynamicHeight={false} indicators={false} controls={() => {
-                                        return ele.photosSrc.length > 1;
-
-                                    }} interval={5000} nextLabel="" prevLabel="">
+                                    <Carousel indicators={false} controls={ctrl} interval={5000} nextLabel=""
+                                              prevLabel="">
                                         {ele.photosSrc.map((photo, i) => {
                                             return (
-                                                <CarouselItem className="Project-Photo">
+                                                <CarouselItem key={i} className="Project-Photo">
                                                     <img
                                                         className="Project-Photo"
                                                         src={photo}

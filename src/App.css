@@ -6,11 +6,6 @@
     color: white;
 }
 
-.FooterCopyright {
-    bottom: 1em;
-    color: white;
-    width: 100vw;
-}
 
 .Home_Welcome {
     padding-top: 2rem;
@@ -26,10 +21,14 @@
     padding-top: 2rem;
 }
 
-.Project-Photo {
-    min-height: 19vh;
-    max-height: 19vh;
-    max-width: inherit;
+.carousel-item {
+    height: 20vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
     overflow: hidden;
 }
 

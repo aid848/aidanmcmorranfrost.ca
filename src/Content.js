@@ -46,6 +46,7 @@ export const OTRAIL3 = require("./img/otrail-3.png").default;
 export const OTRAIL4 = require("./img/otrail-4.png").default;
 export const OTRAIL5 = require("./img/otrail-5.png").default;
 export const OTRAIL6 = require("./img/otrail-6.png").default;
+export const SPONGE1 = require("./img/sponge1.png").default;
 
 // Tech skills
 export const languagesKnown = [{}]; // TODO tuples of lang and comfort level
@@ -177,7 +178,7 @@ const SPONGEENTRY = new ProjectEntry(
     "https://github.com/aid848/AutoSaver_Sponge",
     "https://ore.spongepowered.org/aid848/Autosaver",
     spongeTXT,
-    null
+    [SPONGE1]
 )
 const DOGWALKERENTRY = new ProjectEntry(
     "Dog Walker Companion",
