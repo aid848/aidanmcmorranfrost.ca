@@ -22,7 +22,6 @@ export const Home = (props) => {
                 <Button variant="contained" size="large" onClick={() => {
                     history.push("/projects")
                 }}>Check out my work</Button>
-                {/*<img src={ require('./img/stock1.png').default } />*/}
 
             </div>
             <div className="Home_Contact">

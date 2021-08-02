@@ -6,7 +6,6 @@
     color: white;
 }
 
-
 .Home_Welcome {
     padding-top: 2rem;
     text-align: center;
@@ -22,14 +21,14 @@
 }
 
 .carousel-item {
-    height: 20vh;
-    overflow: hidden;
+    /*height: 20vh;*/
+    /*overflow: hidden;*/
     width: 100%;
 }
 
 .carousel-item img {
     width: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .AboutMeCard {

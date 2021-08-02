@@ -20,33 +20,45 @@ export const namePretextTxt = "Hello, I am"
 export const nameTxt = "Aidan Frost"
 export const nameSubTitleTxt = "UBC Computer Science Student, Independent Developer."
 
-// Image paths
-export const DOG1 = require("./img/dog-1.png").default;
-export const DOG2 = require("./img/dog-2.png").default;
-export const DOG3 = require("./img/dog-3.png").default;
-export const DOG4 = require("./img/dog-4.png").default;
-export const THREE1 = require("./img/304-1.png").default;
-export const THREE2 = require("./img/304-2.png").default;
-export const THREE3 = require("./img/304-3.png").default;
-export const CAL1 = require("./img/cal1.png").default;
-export const CAL2 = require("./img/cal2.png").default;
+// Image paths, project imgs must be 1920x1080
+export const DOG1 = require("./img/scaled/dog-1.png").default;
+export const DOG2 = require("./img/scaled/dog-2.png").default;
+export const DOG3 = require("./img/scaled/dog-3.png").default;
+export const DOG4 = require("./img/scaled/dog-4.png").default;
+export const THREE1 = require("./img/scaled/304-1.png").default;
+export const THREE2 = require("./img/scaled/304-2.png").default;
+export const THREE3 = require("./img/scaled/304-3.png").default;
+export const CAL1 = require("./img/scaled/cal1.png").default;
+export const CAL2 = require("./img/scaled/cal2.png").default;
 export const DOGGO1 = require("./img/doggo1.jpg").default;
 export const DOGGO2 = require("./img/doggo2.jpg").default;
-export const PA1 = require("./img/pa1.jpg").default;
-export const STOCK1 = require("./img/stock1.png").default;
-export const STOCK2 = require("./img/login.png").default;
-export const STOCK3 = require("./img/create acc.png").default;
-export const PLANE1 = require("./img/plane-1.png").default;
-export const PLANE2 = require("./img/plane-2.png").default;
-export const MINE1 = require("./img/mine1.png").default;
-export const MINE2 = require("./img/mine2.png").default;
-export const OTRAIL1 = require("./img/otrail-1.png").default;
-export const OTRAIL2 = require("./img/otrail-2.png").default;
-export const OTRAIL3 = require("./img/otrail-3.png").default;
-export const OTRAIL4 = require("./img/otrail-4.png").default;
-export const OTRAIL5 = require("./img/otrail-5.png").default;
-export const OTRAIL6 = require("./img/otrail-6.png").default;
-export const SPONGE1 = require("./img/sponge1.png").default;
+export const PA1 = require("./img/scaled/pa1.jpg").default;
+export const STOCK1 = require("./img/scaled/stock1.png").default;
+export const STOCK2 = require("./img/scaled/login.png").default;
+export const STOCK3 = require("./img/scaled/create acc.png").default;
+export const PLANE1 = require("./img/scaled/plane-1.png").default;
+export const PLANE2 = require("./img/scaled/plane-2.png").default;
+export const MINE1 = require("./img/scaled/mine1.png").default;
+export const MINE2 = require("./img/scaled/mine2.png").default;
+export const OTRAIL1 = require("./img/scaled/otrail-1.png").default;
+export const OTRAIL2 = require("./img/scaled/otrail-2.png").default;
+export const OTRAIL3 = require("./img/scaled/otrail-3.png").default;
+export const OTRAIL4 = require("./img/scaled/otrail-4.png").default;
+export const OTRAIL5 = require("./img/scaled/otrail-5.png").default;
+export const OTRAIL6 = require("./img/scaled/otrail-6.png").default;
+export const SPONGE1 = require("./img/scaled/sponge1.png").default;
+export const CARDAPP1 = require("./img/scaled/card_app.png").default;
+export const CARDAPP2 = require("./img/scaled/card_app2.png").default;
+export const AML1 = require("./img/scaled/autoML_1.png").default;
+export const AML2 = require("./img/scaled/autoML_2.png").default;
+export const AML3 = require("./img/scaled/autoML_3.png").default;
+export const AML4 = require("./img/scaled/autoML_4.png").default;
+export const AML5 = require("./img/scaled/autoML_5.png").default;
+export const AML6 = require("./img/scaled/autoML_6.png").default;
+export const AML7 = require("./img/scaled/autoML_7.png").default;
+export const AML8 = require("./img/scaled/autoML_8.png").default;
+export const AML9 = require("./img/scaled/autoML_9.png").default;
+export const AML10 = require("./img/scaled/autoML_10.png").default;
 
 // Tech skills
 export const languagesKnown = [{}]; // TODO tuples of lang and comfort level
@@ -85,12 +97,36 @@ export const spongeTXT =
     "A simple Java-based plugin to automatically save your sponge Minecraft server’s world in a convenient Zip format with a user-specified number of backups and backup frequency.";
 export const calDescTXT =
     "CalendarDSL is a domain specific language that helps users to optimize their schedules. The tokenization, parsing, and evaluation rely on a Java backend which can then  generate a CVS file and import the output into your Google Calendar or other compatible software.";
-export const autoMlTXT = "TBA";
+export const cardDescTXT = "A simple pet trading card React app that showcases the MERN technology stack. This application allows you to add your favourite pets as trading cards with: their name, age, photo, and biography. You can search and sort your virtual card deck or order them any way you would like. This web app is running on Heroku which may take a few moments to start if it has not been used for a while. Note: the instance is shared and not designed for concurrency, therefore multiple users may cause interesting results. NOTE: Source code coming soon!"
+export const autoMlTXT = "AutoML is a web application designed to help users interact with PLAI's Ensemble Squared automatic machine learning system. Our application focuses on making the system convenient and user-friendly by guiding the user through all the nessesary steps to make predictions of tabular data, even if they are not experts in ML. We include a third party integration with Kaggle to allow users to access even more data to explore and use with the system for competitions.";
 
 // PROJECT ENTRIES
 
-
-// const AUTOMLENTRY
+// "https://github.com/povel62/cpsc455-project",
+const AUTOMLENTRY = new ProjectEntry(
+    "AutoML Web App",
+    "Summer 2021",
+    "Academic",
+    "MERN (MongoDB, Express, React, and Node.js) web stack",
+    "https://cpsc455-project.herokuapp.com/",
+    null,
+    null,
+    autoMlTXT,
+    [AML1,AML2,AML3,AML4,AML5,AML6,AML7,AML8,AML9,AML10]
+)
+// "https://github.com/aid848/CPSC455Assignments",
+const CARDENTRY = new ProjectEntry(
+    "Pet Trading Card Web App",
+    "Summer 2021",
+    "Academic",
+    "MERN (MongoDB, Express, React, and Node.js) web stack",
+    "https://cpsc455cardapp.herokuapp.com",
+    null,
+    null,
+    cardDescTXT,
+    [CARDAPP1,CARDAPP2]
+    )
+// MongoDB, Express, React, and Node.js
 const PLANEENTRY = new ProjectEntry(
     "Historic Airplane Safety Interactive Visualization Tool",
     "March-May 2021",
@@ -193,4 +229,4 @@ const DOGWALKERENTRY = new ProjectEntry(
 )
 
 // PROJECTS
-export const MYPROJECTS = [PLANEENTRY, PAENTRY, OTRAILENTRY, MINESWEEPERENTRY, CALDSLENTRY, CARRENTENTRY, STOCKENTRY, SPONGEENTRY, DOGWALKERENTRY]
+export const MYPROJECTS = [AUTOMLENTRY,PLANEENTRY, PAENTRY,CARDENTRY, OTRAILENTRY, MINESWEEPERENTRY, CALDSLENTRY, CARRENTENTRY, STOCKENTRY, SPONGEENTRY, DOGWALKERENTRY]

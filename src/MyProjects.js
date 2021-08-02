@@ -54,7 +54,7 @@ export const Projects = (props) => {
                 return (
                     <Grid item key={i} xs style={{display: "flex"}}>
                         <Card className={classes.card}>
-                            <CardMedia className={classes.media} component="div">
+                            <CardMedia component="div">
                                 {ele.photosSrc && (
                                     <Carousel indicators={false} controls={ctrl} interval={5000} nextLabel=""
                                               prevLabel="">
