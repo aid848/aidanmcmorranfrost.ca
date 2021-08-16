@@ -102,14 +102,13 @@ export const autoMlTXT = "AutoML is a web application designed to help users int
 
 // PROJECT ENTRIES
 
-// "https://github.com/povel62/cpsc455-project",
 const AUTOMLENTRY = new ProjectEntry(
     "AutoML Web App",
     "Summer 2021",
     "Academic",
     "MERN (MongoDB, Express, React, and Node.js) web stack",
     "https://cpsc455-project.herokuapp.com/",
-    null,
+    "https://github.com/aid848/AutoML",
     null,
     autoMlTXT,
     [AML1,AML2,AML3,AML4,AML5,AML6,AML7,AML8,AML9,AML10]
