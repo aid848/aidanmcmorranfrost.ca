@@ -39,14 +39,16 @@ function App() {
 
                 </Switch>
             </div>
+            <div style={{textAlign: "center"}}>
             <Card elevation={3} style={{
                 display: "inline-block",
                 backgroundColor: "rgba(255,255,255,0.5)",
                 backgroundSize: "cover",
-                margin: "1rem"
+                margin: "1rem",
             }}>
                 <footer>Copyright © 2021, Aidan Frost | <a style={{color: "black" }} href="https://github.com/aid848/aidanmcmorranfrost.ca">Source Code</a> </footer>
             </Card>
+            </div>
         </div>
     );
 }
