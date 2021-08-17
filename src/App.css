@@ -14,21 +14,20 @@
 
 .Home_Contact {
     padding-top: 2rem;
+    text-align: center;
 }
 
 .Home_Actions {
     padding-top: 2rem;
+    text-align: center;
 }
 
 .carousel-item {
-    /*height: 20vh;*/
-    /*overflow: hidden;*/
     width: 100%;
 }
 
 .carousel-item img {
     width: 100%;
-    /*overflow: hidden;*/
 }
 
 .AboutMeCard {
