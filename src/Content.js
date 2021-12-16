@@ -227,18 +227,17 @@ const DOGWALKERENTRY = new ProjectEntry(
     [DOG1, DOG2, DOG3, DOG4]
 )
 // TODO add links and photos when available
-const TEMPLEGAME = new ProjectEntry(
-    "Run To The Temple",
-    "Sept-Dec 2021",
-    "Academic (team of 5)",
-    "C++ and OpenGL",
-    null,
-    null,
-    null,
-    TEMPLEGAMETXT,
-    []
-)
-
+// const TEMPLEGAME = new ProjectEntry(
+//     "Run To The Temple",
+//     "Sept-Dec 2021",
+//     "Academic (team of 5)",
+//     "C++ and OpenGL",
+//     null,
+//     null,
+//     null,
+//     TEMPLEGAMETXT,
+//     []
+// )
 // PROJECTS
 // TODO add TEMPLEGAME
 export const MYPROJECTS = [AUTOMLENTRY,PLANEENTRY, PAENTRY,CARDENTRY, OTRAILENTRY, MINESWEEPERENTRY, CALDSLENTRY, CARRENTENTRY, STOCKENTRY, SPONGEENTRY, DOGWALKERENTRY]
