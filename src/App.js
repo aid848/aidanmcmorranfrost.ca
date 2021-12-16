@@ -7,6 +7,7 @@ import {Projects} from "./MyProjects";
 import {About} from "./AboutMe";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 function App() {
     const [tab, setTab] = useState("/")
     let history = useHistory();
@@ -46,7 +47,7 @@ function App() {
                 backgroundSize: "cover",
                 margin: "1rem",
             }}>
-                <footer>Copyright © 2021, Aidan Frost | <a style={{color: "black" }} href="https://github.com/aid848/aidanmcmorranfrost.ca">Source Code</a> </footer>
+                <footer>Copyright © 2021 - {new Date().getFullYear()}, Aidan Frost | <a style={{color: "black" }} href="https://github.com/aid848/aidanmcmorranfrost.ca">Source Code</a> </footer>
             </Card>
             </div>
         </div>

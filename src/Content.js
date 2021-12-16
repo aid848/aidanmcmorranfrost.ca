@@ -18,47 +18,47 @@ export const welcomeSubheaderTXT =
     "Try using the nav bar or enjoy the beach photo!";
 export const namePretextTxt = "Hello, I am"
 export const nameTxt = "Aidan Frost"
-export const nameSubTitleTxt = "UBC Computer Science Student, Independent Developer."
+export const nameSubTitleTxt = "B.Sc. in Computer Science with Distinction from UBC."
 
 // Image paths, project imgs must be 1920x1080
-export const DOG1 = require("./img/scaled/dog-1.png").default;
-export const DOG2 = require("./img/scaled/dog-2.png").default;
-export const DOG3 = require("./img/scaled/dog-3.png").default;
-export const DOG4 = require("./img/scaled/dog-4.png").default;
-export const THREE1 = require("./img/scaled/304-1.png").default;
-export const THREE2 = require("./img/scaled/304-2.png").default;
-export const THREE3 = require("./img/scaled/304-3.png").default;
-export const CAL1 = require("./img/scaled/cal1.png").default;
-export const CAL2 = require("./img/scaled/cal2.png").default;
-export const DOGGO1 = require("./img/doggo1.jpg").default;
-export const DOGGO2 = require("./img/doggo2.jpg").default;
-export const PA1 = require("./img/scaled/pa1.jpg").default;
-export const STOCK1 = require("./img/scaled/stock1.png").default;
-export const STOCK2 = require("./img/scaled/login.png").default;
-export const STOCK3 = require("./img/scaled/create acc.png").default;
-export const PLANE1 = require("./img/scaled/plane-1.png").default;
-export const PLANE2 = require("./img/scaled/plane-2.png").default;
-export const MINE1 = require("./img/scaled/mine1.png").default;
-export const MINE2 = require("./img/scaled/mine2.png").default;
-export const OTRAIL1 = require("./img/scaled/otrail-1.png").default;
-export const OTRAIL2 = require("./img/scaled/otrail-2.png").default;
-export const OTRAIL3 = require("./img/scaled/otrail-3.png").default;
-export const OTRAIL4 = require("./img/scaled/otrail-4.png").default;
-export const OTRAIL5 = require("./img/scaled/otrail-5.png").default;
-export const OTRAIL6 = require("./img/scaled/otrail-6.png").default;
-export const SPONGE1 = require("./img/scaled/sponge1.png").default;
-export const CARDAPP1 = require("./img/scaled/card_app.png").default;
-export const CARDAPP2 = require("./img/scaled/card_app2.png").default;
-export const AML1 = require("./img/scaled/autoML_1.png").default;
-export const AML2 = require("./img/scaled/autoML_2.png").default;
-export const AML3 = require("./img/scaled/autoML_3.png").default;
-export const AML4 = require("./img/scaled/autoML_4.png").default;
-export const AML5 = require("./img/scaled/autoML_5.png").default;
-export const AML6 = require("./img/scaled/autoML_6.png").default;
-export const AML7 = require("./img/scaled/autoML_7.png").default;
-export const AML8 = require("./img/scaled/autoML_8.png").default;
-export const AML9 = require("./img/scaled/autoML_9.png").default;
-export const AML10 = require("./img/scaled/autoML_10.png").default;
+export const DOG1 = require("./img/scaled/dog-1.png");
+export const DOG2 = require("./img/scaled/dog-2.png");
+export const DOG3 = require("./img/scaled/dog-3.png");
+export const DOG4 = require("./img/scaled/dog-4.png");
+export const THREE1 = require("./img/scaled/304-1.png");
+export const THREE2 = require("./img/scaled/304-2.png");
+export const THREE3 = require("./img/scaled/304-3.png");
+export const CAL1 = require("./img/scaled/cal1.png");
+export const CAL2 = require("./img/scaled/cal2.png");
+export const DOGGO1 = require("./img/doggo1.jpg");
+export const DOGGO2 = require("./img/doggo2.jpg");
+export const PA1 = require("./img/scaled/pa1.jpg");
+export const STOCK1 = require("./img/scaled/stock1.png");
+export const STOCK2 = require("./img/scaled/login.png");
+export const STOCK3 = require("./img/scaled/create acc.png");
+export const PLANE1 = require("./img/scaled/plane-1.png");
+export const PLANE2 = require("./img/scaled/plane-2.png");
+export const MINE1 = require("./img/scaled/mine1.png");
+export const MINE2 = require("./img/scaled/mine2.png");
+export const OTRAIL1 = require("./img/scaled/otrail-1.png");
+export const OTRAIL2 = require("./img/scaled/otrail-2.png");
+export const OTRAIL3 = require("./img/scaled/otrail-3.png");
+export const OTRAIL4 = require("./img/scaled/otrail-4.png");
+export const OTRAIL5 = require("./img/scaled/otrail-5.png");
+export const OTRAIL6 = require("./img/scaled/otrail-6.png");
+export const SPONGE1 = require("./img/scaled/sponge1.png");
+export const CARDAPP1 = require("./img/scaled/card_app.png");
+export const CARDAPP2 = require("./img/scaled/card_app2.png");
+export const AML1 = require("./img/scaled/autoML_1.png");
+export const AML2 = require("./img/scaled/autoML_2.png");
+export const AML3 = require("./img/scaled/autoML_3.png");
+export const AML4 = require("./img/scaled/autoML_4.png");
+export const AML5 = require("./img/scaled/autoML_5.png");
+export const AML6 = require("./img/scaled/autoML_6.png");
+export const AML7 = require("./img/scaled/autoML_7.png");
+export const AML8 = require("./img/scaled/autoML_8.png");
+export const AML9 = require("./img/scaled/autoML_9.png");
+export const AML10 = require("./img/scaled/autoML_10.png");
 
 // Tech skills
 export const languagesKnown = [{}]; // TODO tuples of lang and comfort level
@@ -73,7 +73,7 @@ export const myPlatforms = [
 
 // ABOUT ME
 export const bioTXT =
-    "Hello, I am a fourth year computer science student at UBC and have two golden retrievers! I made this site to show some of my projects to the world. Many of these projects are have source code and/or demos available so please take a look! I will be adding my CV here soon!";
+    "Hello, I have just graduated with a B.Sc. in computer science (with Distinction) from UBC and have two golden retrievers! I made this site to show some of my projects to the world. Many of these projects are have source code and/or demos available so please take a look! To get in contact with me please visit my Linkedin."
 // PROJECT DESCRIPTIONS
 export const carRentTXT =
     " Developed, with two other team members, a graphical application to interface with an Oracle DBMS system that could be used to manage a car rental company’s day-to-day transactions. Worked on developing the SQL query templates regarding customer actions such as reserving a vehicle and querying the availability of vehicles based on various criteria. Also developed the base GUI in the Swing library for all actions to build upon.  ";
@@ -99,13 +99,13 @@ export const calDescTXT =
     "CalendarDSL is a domain specific language that helps users to optimize their schedules. The tokenization, parsing, and evaluation rely on a Java backend which can then  generate a CVS file and import the output into your Google Calendar or other compatible software.";
 export const cardDescTXT = "A simple pet trading card React app that showcases the MERN technology stack. This application allows you to add your favourite pets as trading cards with: their name, age, photo, and biography. You can search and sort your virtual card deck or order them any way you would like. This web app is running on Heroku which may take a few moments to start if it has not been used for a while. Note: the instance is shared and not designed for concurrency, therefore multiple users may cause interesting results. NOTE: Source code coming soon!"
 export const autoMlTXT = "AutoML is a web application designed to help users interact with PLAI's Ensemble Squared automatic machine learning system. Our application focuses on making the system convenient and user-friendly by guiding the user through all the nessesary steps to make predictions of tabular data, even if they are not experts in ML. We include a third party integration with Kaggle to allow users to access even more data to explore and use with the system for competitions.";
-
+export const TEMPLEGAMETXT = "Run To The Temple is an interactive party board-style game designed for two players who compete among themselves and two AI players to reach the end of the board with the most treasure. The game consists of an overworld stage where each player takes a turn to roll the dice and maybe buy or use an item from a shop tile. Depending on where they land, they may have a positive or negative event occur. After each player has taken their turn, one of three minigames is chosen (a drawing minigame, a platformer style minigame, or a tank combat minigame). The winner(s) of the minigame can gain additional treasures to help them along the way. "
 // PROJECT ENTRIES
 
 const AUTOMLENTRY = new ProjectEntry(
     "AutoML Web App",
     "Summer 2021",
-    "Academic",
+    "Academic (team of 4)",
     "MERN (MongoDB, Express, React, and Node.js) web stack",
     "https://cpsc455-project.herokuapp.com/",
     "https://github.com/aid848/AutoML",
@@ -129,7 +129,7 @@ const CARDENTRY = new ProjectEntry(
 const PLANEENTRY = new ProjectEntry(
     "Historic Airplane Safety Interactive Visualization Tool",
     "March-May 2021",
-    "Academic",
+    "Academic (team of 3)",
     "JavaScript with D3.js, Python",
     "https://plane-vis-demo.netlify.app/",
     "https://github.com/aid848/PlaneVis",
@@ -140,7 +140,7 @@ const PLANEENTRY = new ProjectEntry(
 const PAENTRY = new ProjectEntry(
     "Java Program Analysis Tool",
     "Summer 2020",
-    "Academic",
+    "Academic (team of 4)",
     "Java",
     "https://java-program-analysis.netlify.app/",
     "https://github.com/aid848/-410-Program-Analysis",
@@ -151,7 +151,7 @@ const PAENTRY = new ProjectEntry(
 const OTRAILENTRY = new ProjectEntry(
     "The Oregon Trail Remake",
     "February 2021",
-    "Academic",
+    "Academic (team of 3)",
     "Haskell with Gloss",
     null,
     "https://github.com/aid848/The-Oregon-Trail-Remake",
@@ -163,7 +163,7 @@ const OTRAILENTRY = new ProjectEntry(
 const MINESWEEPERENTRY = new ProjectEntry(
     "Minesweeper Remake",
     "March 2021",
-    "Academic",
+    "Academic (team of 3)",
     "SWI Prolog and XPCE",
     null,
     "https://github.com/aid848/Minesweeper",
@@ -174,7 +174,7 @@ const MINESWEEPERENTRY = new ProjectEntry(
 const CALDSLENTRY = new ProjectEntry(
     "Calendar Domain Specific Language",
     "Summer 2020",
-    "Academic",
+    "Academic (team of 5)",
     "Java based (Tokenizer, Parser, and Evaluator)",
     null,
     "https://github.com/aid848/CalendarDSL",
@@ -185,7 +185,7 @@ const CALDSLENTRY = new ProjectEntry(
 const CARRENTENTRY = new ProjectEntry(
     "Car rental and report database companion",
     "Sept-Nov 2019",
-    "Academic",
+    "Academic (team of 3)",
     "Java and SQL",
     null,
     "https://github.com/aid848/SuperRent",
@@ -203,7 +203,7 @@ const STOCKENTRY = new ProjectEntry(
     null,
     StockTXT,
     [STOCK1, STOCK2, STOCK3]
-);
+)
 const SPONGEENTRY = new ProjectEntry(
     "Sponge Server Auto Save Plugin",
     "May 2020",
@@ -226,6 +226,19 @@ const DOGWALKERENTRY = new ProjectEntry(
     dogwalkerTXT,
     [DOG1, DOG2, DOG3, DOG4]
 )
+// TODO add links and photos when available
+const TEMPLEGAME = new ProjectEntry(
+    "Run To The Temple",
+    "Sept-Dec 2021",
+    "Academic (team of 5)",
+    "C++ and OpenGL",
+    null,
+    null,
+    null,
+    TEMPLEGAMETXT,
+    []
+)
 
 // PROJECTS
+// TODO add TEMPLEGAME
 export const MYPROJECTS = [AUTOMLENTRY,PLANEENTRY, PAENTRY,CARDENTRY, OTRAILENTRY, MINESWEEPERENTRY, CALDSLENTRY, CARRENTENTRY, STOCKENTRY, SPONGEENTRY, DOGWALKERENTRY]
