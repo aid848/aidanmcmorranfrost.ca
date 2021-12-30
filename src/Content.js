@@ -59,6 +59,13 @@ export const AML7 = require("./img/scaled/autoML_7.png");
 export const AML8 = require("./img/scaled/autoML_8.png");
 export const AML9 = require("./img/scaled/autoML_9.png");
 export const AML10 = require("./img/scaled/autoML_10.png");
+export const TEMPLE1 = require("./img/scaled/temple1.png");
+export const TEMPLE2 = require("./img/scaled/temple2.png");
+export const TEMPLE3 = require("./img/scaled/temple3.png");
+export const TEMPLE4 = require("./img/scaled/temple4.png");
+export const TEMPLE5 = require("./img/scaled/temple5.png");
+
+
 
 // Tech skills
 export const languagesKnown = [{}]; // TODO tuples of lang and comfort level
@@ -226,18 +233,16 @@ const DOGWALKERENTRY = new ProjectEntry(
     dogwalkerTXT,
     [DOG1, DOG2, DOG3, DOG4]
 )
-// TODO add links and photos when available
-// const TEMPLEGAME = new ProjectEntry(
-//     "Run To The Temple",
-//     "Sept-Dec 2021",
-//     "Academic (team of 5)",
-//     "C++ and OpenGL",
-//     null,
-//     null,
-//     null,
-//     TEMPLEGAMETXT,
-//     []
-// )
+const TEMPLEGAME = new ProjectEntry(
+    "Run To The Temple",
+    "Sept-Dec 2021",
+    "Academic (team of 5)",
+    "C++ and OpenGL",
+    null,
+    "https://github.com/aid848/RunToTheTemplePublic",
+    null,
+    TEMPLEGAMETXT,
+    [TEMPLE1,TEMPLE2,TEMPLE3,TEMPLE4,TEMPLE5]
+)
 // PROJECTS
-// TODO add TEMPLEGAME
-export const MYPROJECTS = [AUTOMLENTRY,PLANEENTRY, PAENTRY,CARDENTRY, OTRAILENTRY, MINESWEEPERENTRY, CALDSLENTRY, CARRENTENTRY, STOCKENTRY, SPONGEENTRY, DOGWALKERENTRY]
+export const MYPROJECTS = [TEMPLEGAME,AUTOMLENTRY,PLANEENTRY, PAENTRY,CARDENTRY, OTRAILENTRY, MINESWEEPERENTRY, CALDSLENTRY, CARRENTENTRY, STOCKENTRY, SPONGEENTRY, DOGWALKERENTRY]
