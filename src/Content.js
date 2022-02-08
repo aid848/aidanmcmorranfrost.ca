@@ -13,7 +13,6 @@ class ProjectEntry {
 }
 
 // HOME
-export const welcomeTXT = "Welcome to my Site!";
 export const welcomeSubheaderTXT =
     "Try using the nav bar or enjoy the beach photo!";
 export const namePretextTxt = "Hello, I am"
