@@ -3,7 +3,6 @@ import {Button, ButtonGroup, Paper, Typography} from "@material-ui/core";
 import {myPlatforms, namePretextTxt, nameSubTitleTxt, nameTxt} from "./Content";
 import {useNavigate} from "react-router-dom";
 
-
 export const Home = (props) => {
     useEffect(() => {
         props.setTab("/")
@@ -42,8 +41,6 @@ export const Home = (props) => {
                     })}
                 </ButtonGroup>
             </div>
-
-
         </div>
     )
 }
