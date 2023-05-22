@@ -1,14 +1,14 @@
 import React, {useEffect} from "react";
 import {Button, ButtonGroup, Paper, Typography} from "@material-ui/core";
 import {myPlatforms, namePretextTxt, nameSubTitleTxt, nameTxt} from "./Content";
-import {useHistory} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 
 export const Home = (props) => {
     useEffect(() => {
         props.setTab("/")
     }, [props])
-    let history = useHistory();
+    let history = useNavigate();
     return (
         <div>
             <div className="Home_Welcome">
@@ -20,7 +20,7 @@ export const Home = (props) => {
             </div>
             <div className="Home_Actions">
                 <Button variant="contained" size="large" onClick={() => {
-                    history.push("/projects")
+                    history("/projects")
                 }}>Check out my work</Button>
 
             </div>

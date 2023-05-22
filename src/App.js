@@ -1,5 +1,5 @@
 import './App.css';
-import {Route, Switch, useHistory,} from "react-router-dom";
+import {Route, Routes, useNavigate } from "react-router-dom";
 import {AppBar, Card, Tab, Tabs} from "@material-ui/core";
 import {useState} from "react";
 import {Home} from "./Home";
@@ -10,10 +10,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
     const [tab, setTab] = useState("/")
-    let history = useHistory();
+    let history = useNavigate();
 
     const handleNavbar = (e, value, h) => {
-        h.push(value)
+        h(value)
     }
     return (
         <div className="App">
@@ -27,18 +27,11 @@ function App() {
                              style={{backgroundColor: "rgba(255,255,255,0.3)"}} />
                     </Tabs>
                 </AppBar>
-                <Switch>
-                    <Route path="/about">
-                        <About setTab={setTab}/>
-                    </Route>
-                    <Route path="/projects">
-                        <Projects setTab={setTab}/>
-                    </Route>
-                    <Route path="/">
-                        <Home setTab={setTab}/>
-                    </Route>
-
-                </Switch>
+                <Routes>
+                    <Route path="/about" element={<About setTab={setTab}/>}></Route>
+                    <Route path="/projects" element={<Projects setTab={setTab}/>}></Route>
+                    <Route path="/" element={<Home setTab={setTab}/>}></Route>
+                </Routes>
             </div>
             <div style={{textAlign: "center"}}>
             <Card elevation={3} style={{
