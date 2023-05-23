@@ -1,19 +1,19 @@
 import './App.css';
-import {Route, Switch, useHistory,} from "react-router-dom";
+import {Route, Routes, useNavigate } from "react-router-dom";
 import {AppBar, Card, Tab, Tabs} from "@material-ui/core";
 import {useState} from "react";
 import {Home} from "./Home";
 import {Projects} from "./MyProjects";
-import {About} from "./AboutMe";
+// import {About} from "./AboutMe";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
     const [tab, setTab] = useState("/")
-    let history = useHistory();
+    let history = useNavigate();
 
     const handleNavbar = (e, value, h) => {
-        h.push(value)
+        h(value)
     }
     return (
         <div className="App">
@@ -21,24 +21,17 @@ function App() {
                 <AppBar className={"AppBar"} color={'transparent'} position="static">
                     <Tabs value={tab} centered={true} onChange={(e, value) => handleNavbar(e, value, history)}>
                         <Tab label={"Home"} value={"/"} style={{backgroundColor: "rgba(255,255,255,0.3)"}} />
-                        <Tab label={"About Me"} value={"/about"}
-                             style={{backgroundColor: "rgba(255,255,255,0.3)"}} />
+                        {/* <Tab label={"About Me"} value={"/about"}
+                             style={{backgroundColor: "rgba(255,255,255,0.3)"}} /> */}
                         <Tab label={"Projects"} value={"/projects"}
                              style={{backgroundColor: "rgba(255,255,255,0.3)"}} />
                     </Tabs>
                 </AppBar>
-                <Switch>
-                    <Route path="/about">
-                        <About setTab={setTab}/>
-                    </Route>
-                    <Route path="/projects">
-                        <Projects setTab={setTab}/>
-                    </Route>
-                    <Route path="/">
-                        <Home setTab={setTab}/>
-                    </Route>
-
-                </Switch>
+                <Routes>
+                    {/* <Route path="/about" element={<About setTab={setTab}/>}></Route> */}
+                    <Route path="/projects" element={<Projects setTab={setTab}/>}></Route>
+                    <Route path="*" element={<Home setTab={setTab}/>}></Route>
+                </Routes>
             </div>
             <div style={{textAlign: "center"}}>
             <Card elevation={3} style={{
@@ -47,12 +40,11 @@ function App() {
                 backgroundSize: "cover",
                 margin: "1rem",
             }}>
-                <footer>Copyright © 2021 - {new Date().getFullYear()}, Aidan Frost | <a style={{color: "black" }} href="https://github.com/aid848/aidanmcmorranfrost.ca">Source Code</a> </footer>
+                <footer>Copyright © 2021 - {new Date().getFullYear()}, Aidan Frost </footer>
             </Card>
             </div>
         </div>
     );
 }
-
 
 export default App;

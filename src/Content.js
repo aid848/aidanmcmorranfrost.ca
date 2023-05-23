@@ -17,7 +17,7 @@ export const welcomeSubheaderTXT =
     "Try using the nav bar or enjoy the beach photo!";
 export const namePretextTxt = "Hello, I am"
 export const nameTxt = "Aidan Frost"
-export const nameSubTitleTxt = "B.Sc. in Computer Science with Distinction from UBC."
+export const nameSubTitleTxt = "Software Developer"
 
 // Image paths, project imgs must be 1920x1080
 export const DOG1 = require("./img/scaled/dog-1.png");
