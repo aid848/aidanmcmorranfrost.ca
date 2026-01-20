@@ -1,6 +1,6 @@
 import './App.css';
 import {Route, Routes, useNavigate } from "react-router-dom";
-import {AppBar, Card, Tab, Tabs} from "@material-ui/core";
+import {AppBar, Card, Tab, Tabs} from "@mui/material";
 import {useState} from "react";
 import {Home} from "./Home";
 import {Projects} from "./MyProjects";

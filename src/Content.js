@@ -113,7 +113,7 @@ const AUTOMLENTRY = new ProjectEntry(
     "Summer 2021",
     "Academic (team of 4)",
     "MERN (MongoDB, Express, React, and Node.js) web stack",
-    "https://cpsc455-project.herokuapp.com/",
+    null,
     "https://github.com/aid848/AutoML",
     null,
     autoMlTXT,

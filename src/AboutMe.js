@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Paper, Typography} from "@material-ui/core";
+import {Paper, Typography} from "@mui/material";
 import {bioTXT} from "./Content";
 
 
