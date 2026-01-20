@@ -7,33 +7,29 @@ import {
     CardContent,
     CardMedia,
     Grid,
-    makeStyles,
     Typography
-} from "@material-ui/core";
+} from "@mui/material";
+import {styled} from "@mui/material/styles";
 import {MYPROJECTS} from "./Content";
 import {Carousel, CarouselItem} from "react-bootstrap";
 
-const useStyles = makeStyles({
-    media: {
-        minHeight: "20vh",
-        maxHeight: "20vh",
+const StyledCard = styled(Card)(({ theme }) => ({
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    minHeight: "400px",
+    [theme.breakpoints.up('md')]: {
+        width: "30%",
+        margin: "0 auto"
     },
-    card: {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        '@media (min-width:780px)': { // eslint-disable-line no-useless-computed-key
-            minWidth: "30vw",
-            maxWidth: "60vw"
-        },
-        '@media (max-width:779px)': { // eslint-disable-line no-useless-computed-key
-            minWidth: '95vw'
-        }
-    },
-});
+    [theme.breakpoints.down('md')]: {
+        // For smaller screens, make them full width
+        width: "100%",
+        margin: "0 auto"
+    }
+}));
 
 export const Projects = (props) => {
-    const classes = useStyles();
     useEffect(() => {
         props.setTab("/projects")
     }, [props])
@@ -44,16 +40,14 @@ export const Projects = (props) => {
     }
 
     return (
-        <Grid container spacing={3}
-              style={{textAlign: 'center', paddingBottom: "1rem", paddingTop: "1rem"}}>
+        <Grid container spacing={2} style={{marginTop: "1rem"}}>
             {MYPROJECTS.map((ele, i) => {
                 let ctrl = false
                 if (ele.photosSrc) {
                     ctrl = ele.photosSrc.length > 1
                 }
                 return (
-                    <Grid item key={i} xs style={{display: "flex"}}>
-                        <Card className={classes.card}>
+                        <StyledCard size={6}>
                             <CardMedia component="div">
                                 {ele.photosSrc && (
                                     <Carousel indicators={false} controls={ctrl} interval={5000} nextLabel=""
@@ -99,8 +93,7 @@ export const Projects = (props) => {
                                     </Button>}
                                 </ButtonGroup>
                             </CardActions>
-                        </Card>
-                    </Grid>
+                        </StyledCard>
                 );
             })}
         </Grid>)

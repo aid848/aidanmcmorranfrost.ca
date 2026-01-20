@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Button, ButtonGroup, Paper, Typography} from "@material-ui/core";
+import {Button, ButtonGroup, Paper, Typography} from "@mui/material";
 import {myPlatforms, namePretextTxt, nameSubTitleTxt, nameTxt} from "./Content";
 import {useNavigate} from "react-router-dom";
 
