@@ -1,3 +1,48 @@
+// Image paths, project imgs must be 1920x1080
+import DOG1 from "./img/scaled/dog-1.png";
+import DOG2 from "./img/scaled/dog-2.png";
+import DOG3 from "./img/scaled/dog-3.png";
+import DOG4 from "./img/scaled/dog-4.png";
+import THREE1 from "./img/scaled/304-1.png";
+import THREE2 from "./img/scaled/304-2.png";
+import THREE3 from "./img/scaled/304-3.png";
+import CAL1 from "./img/scaled/cal1.png";
+import CAL2 from "./img/scaled/cal2.png";
+import DOGGO1 from "./img/doggo1.jpg";
+import DOGGO2 from "./img/doggo2.jpg";
+import PA1 from "./img/scaled/pa1.jpg";
+import STOCK1 from "./img/scaled/stock1.png";
+import STOCK2 from "./img/scaled/login.png";
+import STOCK3 from "./img/scaled/create-acc.png";
+import PLANE1 from "./img/scaled/plane-1.png";
+import PLANE2 from "./img/scaled/plane-2.png";
+import MINE1 from "./img/scaled/mine1.png";
+import MINE2 from "./img/scaled/mine2.png";
+import OTRAIL1 from "./img/scaled/otrail-1.png";
+import OTRAIL2 from "./img/scaled/otrail-2.png";
+import OTRAIL3 from "./img/scaled/otrail-3.png";
+import OTRAIL4 from "./img/scaled/otrail-4.png";
+import OTRAIL5 from "./img/scaled/otrail-5.png";
+import OTRAIL6 from "./img/scaled/otrail-6.png";
+import SPONGE1 from "./img/scaled/sponge1.png";
+import CARDAPP1 from "./img/scaled/card_app.png";
+import CARDAPP2 from "./img/scaled/card_app2.png";
+import AML1 from "./img/scaled/autoML_1.png";
+import AML2 from "./img/scaled/autoML_2.png";
+import AML3 from "./img/scaled/autoML_3.png";
+import AML4 from "./img/scaled/autoML_4.png";
+import AML5 from "./img/scaled/autoML_5.png";
+import AML6 from "./img/scaled/autoML_6.png";
+import AML7 from "./img/scaled/autoML_7.png";
+import AML8 from "./img/scaled/autoML_8.png";
+import AML9 from "./img/scaled/autoML_9.png";
+import AML10 from "./img/scaled/autoML_10.png";
+import TEMPLE1 from "./img/scaled/temple1.png";
+import TEMPLE2 from "./img/scaled/temple2.png";
+import TEMPLE3 from "./img/scaled/temple3.png";
+import TEMPLE4 from "./img/scaled/temple4.png";
+import TEMPLE5 from "./img/scaled/temple5.png";
+
 class ProjectEntry {
     constructor(name, date, type, langs, demoLink, sourceLink, releaseLink, desc, photosSrc) {
         this.name = name;
@@ -18,52 +63,6 @@ export const welcomeSubheaderTXT =
 export const namePretextTxt = "Hello, I am"
 export const nameTxt = "Aidan Frost"
 export const nameSubTitleTxt = "Software Developer"
-
-// Image paths, project imgs must be 1920x1080
-export const DOG1 = require("./img/scaled/dog-1.png");
-export const DOG2 = require("./img/scaled/dog-2.png");
-export const DOG3 = require("./img/scaled/dog-3.png");
-export const DOG4 = require("./img/scaled/dog-4.png");
-export const THREE1 = require("./img/scaled/304-1.png");
-export const THREE2 = require("./img/scaled/304-2.png");
-export const THREE3 = require("./img/scaled/304-3.png");
-export const CAL1 = require("./img/scaled/cal1.png");
-export const CAL2 = require("./img/scaled/cal2.png");
-export const DOGGO1 = require("./img/doggo1.jpg");
-export const DOGGO2 = require("./img/doggo2.jpg");
-export const PA1 = require("./img/scaled/pa1.jpg");
-export const STOCK1 = require("./img/scaled/stock1.png");
-export const STOCK2 = require("./img/scaled/login.png");
-export const STOCK3 = require("./img/scaled/create acc.png");
-export const PLANE1 = require("./img/scaled/plane-1.png");
-export const PLANE2 = require("./img/scaled/plane-2.png");
-export const MINE1 = require("./img/scaled/mine1.png");
-export const MINE2 = require("./img/scaled/mine2.png");
-export const OTRAIL1 = require("./img/scaled/otrail-1.png");
-export const OTRAIL2 = require("./img/scaled/otrail-2.png");
-export const OTRAIL3 = require("./img/scaled/otrail-3.png");
-export const OTRAIL4 = require("./img/scaled/otrail-4.png");
-export const OTRAIL5 = require("./img/scaled/otrail-5.png");
-export const OTRAIL6 = require("./img/scaled/otrail-6.png");
-export const SPONGE1 = require("./img/scaled/sponge1.png");
-export const CARDAPP1 = require("./img/scaled/card_app.png");
-export const CARDAPP2 = require("./img/scaled/card_app2.png");
-export const AML1 = require("./img/scaled/autoML_1.png");
-export const AML2 = require("./img/scaled/autoML_2.png");
-export const AML3 = require("./img/scaled/autoML_3.png");
-export const AML4 = require("./img/scaled/autoML_4.png");
-export const AML5 = require("./img/scaled/autoML_5.png");
-export const AML6 = require("./img/scaled/autoML_6.png");
-export const AML7 = require("./img/scaled/autoML_7.png");
-export const AML8 = require("./img/scaled/autoML_8.png");
-export const AML9 = require("./img/scaled/autoML_9.png");
-export const AML10 = require("./img/scaled/autoML_10.png");
-export const TEMPLE1 = require("./img/scaled/temple1.png");
-export const TEMPLE2 = require("./img/scaled/temple2.png");
-export const TEMPLE3 = require("./img/scaled/temple3.png");
-export const TEMPLE4 = require("./img/scaled/temple4.png");
-export const TEMPLE5 = require("./img/scaled/temple5.png");
-
 
 
 // Tech skills
