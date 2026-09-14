@@ -31,6 +31,12 @@ describe('App', () => {
         expect(screen.getByRole('tab', {name: 'Projects'})).toHaveAttribute('aria-selected', 'true');
     });
 
+    test('selects the Projects tab when the URL has a trailing slash', () => {
+        renderAt('/projects/');
+        expect(projectHeading(MYPROJECTS[0])).toBeInTheDocument();
+        expect(screen.getByRole('tab', {name: 'Projects'})).toHaveAttribute('aria-selected', 'true');
+    });
+
     test('falls back to the home page for unknown paths', () => {
         renderAt('/does/not/exist');
         expect(screen.getByText('Aidan Frost')).toBeInTheDocument();

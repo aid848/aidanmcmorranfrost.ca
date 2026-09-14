@@ -1,12 +1,9 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {Button, ButtonGroup, Paper, Typography} from "@mui/material";
 import {myPlatforms, namePretextTxt, nameSubTitleTxt, nameTxt} from "./Content";
 import {useNavigate} from "react-router";
 
-export const Home = (props: { setTab: (tab: string) => void }) => {
-    useEffect(() => {
-        props.setTab("/")
-    }, [props])
+export const Home = () => {
     let history = useNavigate();
     return (
         <div>

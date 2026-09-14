@@ -1,7 +1,7 @@
 import './App.css';
-import {Route, Routes, useNavigate, type NavigateFunction} from "react-router";
+import {Route, Routes, useMatch, useNavigate, type NavigateFunction} from "react-router";
 import {AppBar, Card, Tab, Tabs} from "@mui/material";
-import {useState, type SyntheticEvent} from "react";
+import {type SyntheticEvent} from "react";
 import {Home} from "./Home";
 import {Projects} from "./MyProjects";
 // import {About} from "./AboutMe";
@@ -9,7 +9,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
-    const [tab, setTab] = useState("/")
+    // The selected tab follows the URL. Unmatched paths render Home, so they select Home.
+    const onProjects = useMatch("/projects") !== null;
+    // const onAbout = useMatch("/about") !== null;
+    const tab = onProjects ? "/projects" : "/";
     let history = useNavigate();
 
     const handleNavbar = (e: SyntheticEvent, value: string, h: NavigateFunction) => {
@@ -28,9 +31,9 @@ function App() {
                     </Tabs>
                 </AppBar>
                 <Routes>
-                    {/* <Route path="/about" element={<About setTab={setTab}/>}></Route> */}
-                    <Route path="/projects" element={<Projects setTab={setTab}/>}></Route>
-                    <Route path="*" element={<Home setTab={setTab}/>}></Route>
+                    {/* <Route path="/about" element={<About/>}></Route> */}
+                    <Route path="/projects" element={<Projects/>}></Route>
+                    <Route path="*" element={<Home/>}></Route>
                 </Routes>
             </div>
             <div style={{textAlign: "center"}}>

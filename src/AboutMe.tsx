@@ -1,13 +1,9 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {Paper, Typography} from "@mui/material";
 import {bioTXT} from "./Content";
 
 
-export const About = (props: { setTab: (tab: string) => void }) => {
-    useEffect(() => {
-        props.setTab("/about")
-    }, [props])
-
+export const About = () => {
     return (
         <div style={{textAlign: "center"}}>
                 <Paper className="AboutMeCard" elevation={3}

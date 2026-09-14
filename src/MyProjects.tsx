@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {
     Button,
     ButtonGroup,
@@ -29,11 +29,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
     }
 }));
 
-export const Projects = (props: { setTab: (tab: string) => void }) => {
-    useEffect(() => {
-        props.setTab("/projects")
-    }, [props])
-
+export const Projects = () => {
     const gotoSource = (value: string | null) => {
         if (!value) return;
         const win = window.open(value, "_blank", "noopener,noreferrer");
