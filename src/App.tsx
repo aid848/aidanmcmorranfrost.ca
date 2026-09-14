@@ -1,7 +1,7 @@
 import './App.css';
-import {Route, Routes, useNavigate } from "react-router-dom";
+import {Route, Routes, useNavigate, type NavigateFunction} from "react-router-dom";
 import {AppBar, Card, Tab, Tabs} from "@mui/material";
-import {useState} from "react";
+import {useState, type SyntheticEvent} from "react";
 import {Home} from "./Home";
 import {Projects} from "./MyProjects";
 // import {About} from "./AboutMe";
@@ -12,7 +12,7 @@ function App() {
     const [tab, setTab] = useState("/")
     let history = useNavigate();
 
-    const handleNavbar = (e, value, h) => {
+    const handleNavbar = (e: SyntheticEvent, value: string, h: NavigateFunction) => {
         h(value)
     }
     return (

@@ -3,7 +3,7 @@ import {Button, ButtonGroup, Paper, Typography} from "@mui/material";
 import {myPlatforms, namePretextTxt, nameSubTitleTxt, nameTxt} from "./Content";
 import {useNavigate} from "react-router-dom";
 
-export const Home = (props) => {
+export const Home = (props: { setTab: (tab: string) => void }) => {
     useEffect(() => {
         props.setTab("/")
     }, [props])

@@ -29,12 +29,13 @@ const StyledCard = styled(Card)(({ theme }) => ({
     }
 }));
 
-export const Projects = (props) => {
+export const Projects = (props: { setTab: (tab: string) => void }) => {
     useEffect(() => {
         props.setTab("/projects")
     }, [props])
 
-    const gotoSource = (value) => {
+    const gotoSource = (value: string | null) => {
+        if (!value) return;
         const win = window.open(value, "_blank", "noopener,noreferrer");
         if (win) win.opener = null;
     }
@@ -47,7 +48,7 @@ export const Projects = (props) => {
                     ctrl = ele.photosSrc.length > 1
                 }
                 return (
-                        <StyledCard size={6}>
+                        <StyledCard>
                             <CardMedia component="div">
                                 {ele.photosSrc && (
                                     <Carousel indicators={false} controls={ctrl} interval={5000} nextLabel=""

@@ -16,6 +16,7 @@ const Wrapper = () => {
 }
 const theme = createTheme();
 const app = document.getElementById('root');
+if (!app) throw new Error('Missing #root element');
 const appRoot = createRoot(app);
 appRoot.render(<React.StrictMode><Wrapper/></React.StrictMode>);
 

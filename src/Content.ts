@@ -43,18 +43,16 @@ import TEMPLE3 from "./img/scaled/temple3.png";
 import TEMPLE4 from "./img/scaled/temple4.png";
 import TEMPLE5 from "./img/scaled/temple5.png";
 
-class ProjectEntry {
-    constructor(name, date, type, langs, demoLink, sourceLink, releaseLink, desc, photosSrc) {
-        this.name = name;
-        this.date = date;
-        this.type = type;
-        this.langs = langs;
-        this.demoLink = demoLink;
-        this.sourceLink = sourceLink;
-        this.releaseLink = releaseLink;
-        this.desc = desc;
-        this.photosSrc = photosSrc;
-    }
+export interface ProjectEntry {
+    name: string;
+    date: string;
+    type: string;
+    langs: string;
+    demoLink: string | null;
+    sourceLink: string | null;
+    releaseLink: string | null;
+    desc: string;
+    photosSrc: string[];
 }
 
 // HOME
@@ -107,140 +105,139 @@ export const autoMlTXT = "AutoML is a web application designed to help users int
 export const TEMPLEGAMETXT = "Run To The Temple is an interactive party board-style game designed for two players who compete among themselves and two AI players to reach the end of the board with the most treasure. The game consists of an overworld stage where each player takes a turn to roll the dice and maybe buy or use an item from a shop tile. Depending on where they land, they may have a positive or negative event occur. After each player has taken their turn, one of three minigames is chosen (a drawing minigame, a platformer style minigame, or a tank combat minigame). The winner(s) of the minigame can gain additional treasures to help them along the way. "
 // PROJECT ENTRIES
 
-const AUTOMLENTRY = new ProjectEntry(
-    "AutoML Web App",
-    "Summer 2021",
-    "Academic (team of 4)",
-    "MERN (MongoDB, Express, React, and Node.js) web stack",
-    null,
-    "https://github.com/aid848/AutoML",
-    null,
-    autoMlTXT,
-    [AML1,AML2,AML3,AML4,AML5,AML6,AML7,AML8,AML9,AML10]
-)
+const AUTOMLENTRY: ProjectEntry = {
+    name: "AutoML Web App",
+    date: "Summer 2021",
+    type: "Academic (team of 4)",
+    langs: "MERN (MongoDB, Express, React, and Node.js) web stack",
+    demoLink: null,
+    sourceLink: "https://github.com/aid848/AutoML",
+    releaseLink: null,
+    desc: autoMlTXT,
+    photosSrc: [AML1, AML2, AML3, AML4, AML5, AML6, AML7, AML8, AML9, AML10],
+}
 // "https://github.com/aid848/CPSC455Assignments",
-const CARDENTRY = new ProjectEntry(
-    "Pet Trading Card Web App",
-    "Summer 2021",
-    "Academic",
-    "MERN (MongoDB, Express, React, and Node.js) web stack",
-    "https://cpsc455cardapp.herokuapp.com",
-    null,
-    null,
-    cardDescTXT,
-    [CARDAPP1,CARDAPP2]
-    )
+const CARDENTRY: ProjectEntry = {
+    name: "Pet Trading Card Web App",
+    date: "Summer 2021",
+    type: "Academic",
+    langs: "MERN (MongoDB, Express, React, and Node.js) web stack",
+    demoLink: "https://cpsc455cardapp.herokuapp.com",
+    sourceLink: null,
+    releaseLink: null,
+    desc: cardDescTXT,
+    photosSrc: [CARDAPP1, CARDAPP2],
+}
 // MongoDB, Express, React, and Node.js
-const PLANEENTRY = new ProjectEntry(
-    "Historic Airplane Safety Interactive Visualization Tool",
-    "March-May 2021",
-    "Academic (team of 3)",
-    "JavaScript with D3.js, Python",
-    "https://plane-vis-demo.netlify.app/",
-    "https://github.com/aid848/PlaneVis",
-    null,
-    planeTXT,
-    [PLANE1, PLANE2]
-)
-const PAENTRY = new ProjectEntry(
-    "Java Program Analysis Tool",
-    "Summer 2020",
-    "Academic (team of 4)",
-    "Java",
-    "https://java-program-analysis.netlify.app/",
-    "https://github.com/aid848/-410-Program-Analysis",
-    null,
-    PATXT,
-    [PA1]
-)
-const OTRAILENTRY = new ProjectEntry(
-    "The Oregon Trail Remake",
-    "February 2021",
-    "Academic (team of 3)",
-    "Haskell with Gloss",
-    null,
-    "https://github.com/aid848/The-Oregon-Trail-Remake",
-    "https://github.com/aid848/The-Oregon-Trail-Remake/releases",
-    oTrailTXT,
-    [OTRAIL1, OTRAIL2, OTRAIL3, OTRAIL4, OTRAIL5,
-        OTRAIL6]
-)
-const MINESWEEPERENTRY = new ProjectEntry(
-    "Minesweeper Remake",
-    "March 2021",
-    "Academic (team of 3)",
-    "SWI Prolog and XPCE",
-    null,
-    "https://github.com/aid848/Minesweeper",
-    null,
-    minesweeperTXT,
-    [MINE1, MINE2]
-)
-const CALDSLENTRY = new ProjectEntry(
-    "Calendar Domain Specific Language",
-    "Summer 2020",
-    "Academic (team of 5)",
-    "Java based (Tokenizer, Parser, and Evaluator)",
-    null,
-    "https://github.com/aid848/CalendarDSL",
-    null,
-    calDescTXT,
-    [CAL1, CAL2]
-)
-const CARRENTENTRY = new ProjectEntry(
-    "Car rental and report database companion",
-    "Sept-Nov 2019",
-    "Academic (team of 3)",
-    "Java and SQL",
-    null,
-    "https://github.com/aid848/SuperRent",
-    null,
-    carRentTXT,
-    [THREE1, THREE2, THREE3]
-)
-const STOCKENTRY = new ProjectEntry(
-    "Educational Multi-User Stock Market Simulator",
-    "Summer 2020-Ongoing",
-    "Personal",
-    "Typescript with React",
-    null,
-    "https://github.com/aid848/stockMarketGameServer",
-    null,
-    StockTXT,
-    [STOCK1, STOCK2, STOCK3]
-)
-const SPONGEENTRY = new ProjectEntry(
-    "Sponge Server Auto Save Plugin",
-    "May 2020",
-    "Hobby",
-    "Java",
-    null,
-    "https://github.com/aid848/AutoSaver_Sponge",
-    "https://ore.spongepowered.org/aid848/Autosaver",
-    spongeTXT,
-    [SPONGE1]
-)
-const DOGWALKERENTRY = new ProjectEntry(
-    "Dog Walker Companion",
-    "Sept-Nov 2019",
-    "Academic",
-    "Java",
-    null,
-    "https://github.com/aid848/DogWalkingHelper",
-    null,
-    dogwalkerTXT,
-    [DOG1, DOG2, DOG3, DOG4]
-)
-const TEMPLEGAME = new ProjectEntry(
-    "Run To The Temple",
-    "Sept-Dec 2021",
-    "Academic (team of 5)",
-    "C++ and OpenGL",
-    null,
-    "https://github.com/aid848/RunToTheTemplePublic",
-    null,
-    TEMPLEGAMETXT,
-    [TEMPLE1,TEMPLE2,TEMPLE3,TEMPLE4,TEMPLE5]
-)
+const PLANEENTRY: ProjectEntry = {
+    name: "Historic Airplane Safety Interactive Visualization Tool",
+    date: "March-May 2021",
+    type: "Academic (team of 3)",
+    langs: "JavaScript with D3.js, Python",
+    demoLink: "https://plane-vis-demo.netlify.app/",
+    sourceLink: "https://github.com/aid848/PlaneVis",
+    releaseLink: null,
+    desc: planeTXT,
+    photosSrc: [PLANE1, PLANE2],
+}
+const PAENTRY: ProjectEntry = {
+    name: "Java Program Analysis Tool",
+    date: "Summer 2020",
+    type: "Academic (team of 4)",
+    langs: "Java",
+    demoLink: "https://java-program-analysis.netlify.app/",
+    sourceLink: "https://github.com/aid848/-410-Program-Analysis",
+    releaseLink: null,
+    desc: PATXT,
+    photosSrc: [PA1],
+}
+const OTRAILENTRY: ProjectEntry = {
+    name: "The Oregon Trail Remake",
+    date: "February 2021",
+    type: "Academic (team of 3)",
+    langs: "Haskell with Gloss",
+    demoLink: null,
+    sourceLink: "https://github.com/aid848/The-Oregon-Trail-Remake",
+    releaseLink: "https://github.com/aid848/The-Oregon-Trail-Remake/releases",
+    desc: oTrailTXT,
+    photosSrc: [OTRAIL1, OTRAIL2, OTRAIL3, OTRAIL4, OTRAIL5, OTRAIL6],
+}
+const MINESWEEPERENTRY: ProjectEntry = {
+    name: "Minesweeper Remake",
+    date: "March 2021",
+    type: "Academic (team of 3)",
+    langs: "SWI Prolog and XPCE",
+    demoLink: null,
+    sourceLink: "https://github.com/aid848/Minesweeper",
+    releaseLink: null,
+    desc: minesweeperTXT,
+    photosSrc: [MINE1, MINE2],
+}
+const CALDSLENTRY: ProjectEntry = {
+    name: "Calendar Domain Specific Language",
+    date: "Summer 2020",
+    type: "Academic (team of 5)",
+    langs: "Java based (Tokenizer, Parser, and Evaluator)",
+    demoLink: null,
+    sourceLink: "https://github.com/aid848/CalendarDSL",
+    releaseLink: null,
+    desc: calDescTXT,
+    photosSrc: [CAL1, CAL2],
+}
+const CARRENTENTRY: ProjectEntry = {
+    name: "Car rental and report database companion",
+    date: "Sept-Nov 2019",
+    type: "Academic (team of 3)",
+    langs: "Java and SQL",
+    demoLink: null,
+    sourceLink: "https://github.com/aid848/SuperRent",
+    releaseLink: null,
+    desc: carRentTXT,
+    photosSrc: [THREE1, THREE2, THREE3],
+}
+const STOCKENTRY: ProjectEntry = {
+    name: "Educational Multi-User Stock Market Simulator",
+    date: "Summer 2020-Ongoing",
+    type: "Personal",
+    langs: "Typescript with React",
+    demoLink: null,
+    sourceLink: "https://github.com/aid848/stockMarketGameServer",
+    releaseLink: null,
+    desc: StockTXT,
+    photosSrc: [STOCK1, STOCK2, STOCK3],
+}
+const SPONGEENTRY: ProjectEntry = {
+    name: "Sponge Server Auto Save Plugin",
+    date: "May 2020",
+    type: "Hobby",
+    langs: "Java",
+    demoLink: null,
+    sourceLink: "https://github.com/aid848/AutoSaver_Sponge",
+    releaseLink: "https://ore.spongepowered.org/aid848/Autosaver",
+    desc: spongeTXT,
+    photosSrc: [SPONGE1],
+}
+const DOGWALKERENTRY: ProjectEntry = {
+    name: "Dog Walker Companion",
+    date: "Sept-Nov 2019",
+    type: "Academic",
+    langs: "Java",
+    demoLink: null,
+    sourceLink: "https://github.com/aid848/DogWalkingHelper",
+    releaseLink: null,
+    desc: dogwalkerTXT,
+    photosSrc: [DOG1, DOG2, DOG3, DOG4],
+}
+const TEMPLEGAME: ProjectEntry = {
+    name: "Run To The Temple",
+    date: "Sept-Dec 2021",
+    type: "Academic (team of 5)",
+    langs: "C++ and OpenGL",
+    demoLink: null,
+    sourceLink: "https://github.com/aid848/RunToTheTemplePublic",
+    releaseLink: null,
+    desc: TEMPLEGAMETXT,
+    photosSrc: [TEMPLE1, TEMPLE2, TEMPLE3, TEMPLE4, TEMPLE5],
+}
 // PROJECTS
-export const MYPROJECTS = [TEMPLEGAME,AUTOMLENTRY,PLANEENTRY, PAENTRY,CARDENTRY, OTRAILENTRY, MINESWEEPERENTRY, CALDSLENTRY, CARRENTENTRY, STOCKENTRY, SPONGEENTRY, DOGWALKERENTRY]
+export const MYPROJECTS: ProjectEntry[] = [TEMPLEGAME,AUTOMLENTRY,PLANEENTRY, PAENTRY,CARDENTRY, OTRAILENTRY, MINESWEEPERENTRY, CALDSLENTRY, CARRENTENTRY, STOCKENTRY, SPONGEENTRY, DOGWALKERENTRY]

@@ -3,7 +3,7 @@ import {Paper, Typography} from "@mui/material";
 import {bioTXT} from "./Content";
 
 
-export const About = (props) => {
+export const About = (props: { setTab: (tab: string) => void }) => {
     useEffect(() => {
         props.setTab("/about")
     }, [props])
