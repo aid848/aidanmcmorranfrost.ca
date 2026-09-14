@@ -13,21 +13,15 @@ import {styled} from "@mui/material/styles";
 import {MYPROJECTS} from "./Content";
 import {Carousel, CarouselItem} from "react-bootstrap";
 
-const StyledCard = styled(Card)(({ theme }) => ({
+// Width comes from the surrounding Grid item. Full height keeps cards in a row
+// the same height so the action buttons line up at the bottom.
+const StyledCard = styled(Card)({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
     minHeight: "400px",
-    [theme.breakpoints.up('md')]: {
-        width: "30%",
-        margin: "0 auto"
-    },
-    [theme.breakpoints.down('md')]: {
-        // For smaller screens, make them full width
-        width: "100%",
-        margin: "0 auto"
-    }
-}));
+    height: "100%",
+});
 
 export const Projects = () => {
     const gotoSource = (value: string | null) => {
@@ -37,13 +31,14 @@ export const Projects = () => {
     }
 
     return (
-        <Grid container spacing={2} style={{marginTop: "1rem"}}>
-            {MYPROJECTS.map((ele, i) => {
+        <Grid container spacing={2} sx={{marginTop: "1rem", px: {xs: 0, md: 2}}}>
+            {MYPROJECTS.map((ele) => {
                 let ctrl = false
                 if (ele.photosSrc) {
                     ctrl = ele.photosSrc.length > 1
                 }
                 return (
+                    <Grid key={ele.name} size={{xs: 12, md: 4}}>
                         <StyledCard>
                             <CardMedia component="div">
                                 {ele.photosSrc && (
@@ -91,6 +86,7 @@ export const Projects = () => {
                                 </ButtonGroup>
                             </CardActions>
                         </StyledCard>
+                    </Grid>
                 );
             })}
         </Grid>)
