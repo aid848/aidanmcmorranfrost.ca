@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {Button, ButtonGroup, Paper, Typography} from "@mui/material";
 import {myPlatforms, namePretextTxt, nameSubTitleTxt, nameTxt} from "./Content";
-import {useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router";
 
 export const Home = (props: { setTab: (tab: string) => void }) => {
     useEffect(() => {

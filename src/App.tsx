@@ -1,5 +1,5 @@
 import './App.css';
-import {Route, Routes, useNavigate, type NavigateFunction} from "react-router-dom";
+import {Route, Routes, useNavigate, type NavigateFunction} from "react-router";
 import {AppBar, Card, Tab, Tabs} from "@mui/material";
 import {useState, type SyntheticEvent} from "react";
 import {Home} from "./Home";

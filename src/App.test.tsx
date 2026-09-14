@@ -1,5 +1,5 @@
 import {fireEvent, render, screen} from '@testing-library/react';
-import {MemoryRouter} from 'react-router-dom';
+import {MemoryRouter} from 'react-router';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import App from './App';
 import {MYPROJECTS, type ProjectEntry} from './Content';
