@@ -62,7 +62,7 @@ export const Projects = () => {
                                     {ele.name} | {ele.date} | {ele.type}
                                 </Typography>
                                 <Typography variant="h6">{ele.langs}</Typography>
-                                <Typography variant="body2" color="textSecondary" component="p">
+                                <Typography variant="body2" color="text.secondary" component="p">
                                     {ele.desc}
                                 </Typography>
                             </CardContent>
