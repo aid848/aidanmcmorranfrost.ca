@@ -22,12 +22,22 @@
     text-align: center;
 }
 
-.carousel-item {
-    width: 100%;
+.Project-Carousel-Viewport {
+    overflow: hidden;
 }
 
-.carousel-item img {
+.Project-Carousel-Track {
+    display: flex;
+}
+
+.Project-Carousel-Slide {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+.Project-Photo {
     width: 100%;
+    display: block;
 }
 
 .AboutMeCard {

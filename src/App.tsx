@@ -5,7 +5,6 @@ import {type SyntheticEvent} from "react";
 import {Home} from "./Home";
 import {Projects} from "./MyProjects";
 // import {About} from "./AboutMe";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

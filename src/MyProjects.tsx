@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import {styled} from "@mui/material/styles";
 import {MYPROJECTS} from "./Content";
-import {Carousel, CarouselItem} from "react-bootstrap";
+import {ProjectCarousel} from "./ProjectCarousel";
 
 // Width comes from the surrounding Grid item. Full height keeps cards in a row
 // the same height so the action buttons line up at the bottom.
@@ -33,29 +33,11 @@ export const Projects = () => {
     return (
         <Grid container spacing={2} sx={{marginTop: "1rem", px: {xs: 0, md: 2}}}>
             {MYPROJECTS.map((ele) => {
-                let ctrl = false
-                if (ele.photosSrc) {
-                    ctrl = ele.photosSrc.length > 1
-                }
                 return (
                     <Grid key={ele.name} size={{xs: 12, md: 4}}>
                         <StyledCard>
                             <CardMedia component="div">
-                                {ele.photosSrc && (
-                                    <Carousel indicators={false} controls={ctrl} interval={5000} nextLabel=""
-                                              prevLabel="">
-                                        {ele.photosSrc.map((photo, i) => {
-                                            return (
-                                                <CarouselItem key={i} className="Project-Photo">
-                                                    <img
-                                                        className="Project-Photo"
-                                                        src={photo}
-                                                        alt={`slide-${i}`}
-                                                    />
-                                                </CarouselItem>)
-                                        })
-                                        }
-                                    </Carousel>)}
+                                {ele.photosSrc && <ProjectCarousel photos={ele.photosSrc} />}
                             </CardMedia>
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">

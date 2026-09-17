@@ -56,15 +56,9 @@ export interface ProjectEntry {
 }
 
 // HOME
-export const welcomeSubheaderTXT =
-    "Try using the nav bar or enjoy the beach photo!";
 export const namePretextTxt = "Hello, I am"
 export const nameTxt = "Aidan Frost"
 export const nameSubTitleTxt = "Software Developer"
-
-
-// Tech skills
-export const languagesKnown = [{}]; // TODO tuples of lang and comfort level
 
 // Contacts
 export const myPlatforms = [
