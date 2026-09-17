@@ -4,6 +4,18 @@
 
 A website designed to show my other projects. Most of the projects are available on GitHub but this site has some interactive demos and shows off some projects I've worked on that are closed source.
 
+## Development
+
+Requires Node 22.22 or newer.
+
+```sh
+npm install      # install dependencies
+npm run dev      # start the Vite dev server
+npm test         # run the Vitest suite
+npm run lint     # ESLint
+npm run build    # type-check and build into build/
+```
+
 ## Browser support
 
 Requires a modern evergreen browser: Chrome 117+, Firefox 121+, Safari 17+. This is the floor set by MUI 9 and Vite 8 defaults.
