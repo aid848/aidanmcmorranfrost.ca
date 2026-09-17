@@ -1,6 +1,6 @@
 // Adds jest-dom matchers such as toBeInTheDocument() to Vitest's expect.
 // https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom/vitest';
+import "@testing-library/jest-dom/vitest";
 
 // jsdom implements none of matchMedia, ResizeObserver or IntersectionObserver,
 // all of which Embla needs to construct a carousel. Stub them so the project
@@ -30,8 +30,8 @@ if (!window.ResizeObserver) {
 if (!window.IntersectionObserver) {
     window.IntersectionObserver = class {
         readonly root = null;
-        readonly rootMargin = '';
-        readonly scrollMargin = '';
+        readonly rootMargin = "";
+        readonly scrollMargin = "";
         readonly thresholds = [];
         observe() {}
         unobserve() {}
