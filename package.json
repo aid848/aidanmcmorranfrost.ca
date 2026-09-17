@@ -6,6 +6,7 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc --noEmit && vite build",
+        "clean": "node -e \"for (const p of ['build', '.vitest', 'node_modules/.vite']) require('fs').rmSync(p, { recursive: true, force: true })\"",
         "preview": "vite preview",
         "test": "vitest run",
         "test:watch": "vitest",
